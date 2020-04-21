@@ -22,7 +22,7 @@ public class RandomValue {
         //Finding Out When It's 12am
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR_OF_DAY, 0);
-        calendar.set(Calendar.MINUTE, 2);
+        calendar.set(Calendar.MINUTE, 42);
         calendar.set(Calendar.SECOND, 0);
         Date time = calendar.getTime();
 
@@ -40,7 +40,7 @@ public class RandomValue {
         int max = 100000;
         //Generate A Random Number
         int random_int = (int) (Math.random() * (max - min + 1) + min); 
-        File file = new File("C:\\Users\\giant\\Documents\\NetBeansProjects\\RandomValue\\src\\randomvalue\\NOTD.txt");
+        File file = new File("RandomValue/src/randomvalue/NOTD.txt");
         PrintWriter writer = null;
             try {
                 writer = new PrintWriter(file);
