@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1> The Price Of The Day Is</h1>
+<?php
+mt_srand((int)date('D'));
+echo number_format(mt_rand(1000, 100000));
+?>
+</body>
+</html>
