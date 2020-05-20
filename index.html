@@ -98,8 +98,9 @@ var finalValue = dateStr + "[m<{Hky$W^/C#@C4%8CcSNW6R^#%";
 
 Math.seedrandom(finalValue);
 rV = Math.floor(Math.random() * (100000 - 1000)) + 1000;
-document.getElementById("potd").innerHTML = function numberWithCommas(rV) {
+function numberWithCommas(rV) {
     return rV.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+document.getElementById("potd").innerHTML = numberWithCommas;
 }
 </script>
 
