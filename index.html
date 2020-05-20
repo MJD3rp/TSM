@@ -94,13 +94,13 @@ var month = d.getMonth() + 1;
 var year = d.getFullYear();
 var dateStr = date + "/" + month + "/" + year;
 var finalValue = dateStr + "[m<{Hky$W^/C#@C4%8CcSNW6R^#%";
-    
-
+    	
 Math.seedrandom(finalValue);
 var rV = Math.floor(Math.random() * (100000 - 1000)) + 1000;
-function numberWithCommas(rV) {
-    return rV.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-document.getElementById("potd").innerHTML = numberWithCommas;
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+var ffV = numberWithCommas(rV);
+document.getElementById("potd").innerHTML = ffV;
 }
 </script>
 
