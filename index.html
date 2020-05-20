@@ -95,13 +95,16 @@ var year = d.getFullYear();
 var dateStr = date + "/" + month + "/" + year;
 var finalValue = dateStr + "[m<{Hky$W^/C#@C4%8CcSNW6R^#%";
     	
+function thousands_separators(num)
+  {
+    var num_parts = num.toString().split(".");
+    num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return num_parts.join(".");
+  }
 
 Math.seedrandom(finalValue);
 var rV = Math.floor(Math.random() * (100000 - 1000)) + 1000;
-function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-var ffV = numberWithCommas(rV);
+var ffV = thousands_separators(rV);
 document.getElementById("potd").innerHTML = ffV;
 }
 </script>
